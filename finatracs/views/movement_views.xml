@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+
+        <!-- List View -->
+        <record id="view_movement_list" model="ir.ui.view">
+            <field name="name">movement.list</field>
+            <field name="model">module.movement</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="source_account_id"/>
+                    <field name="destination_account_id"/>
+                    <field name="amount"/>
+                    <field name="currency_id"/>
+                    <field name="execution_date"/>
+                    <field name="label"/>
+                    <field name="state"/>
+                    <field name="administrator_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_movement_search" model="ir.ui.view">
+            <field name="name">movement.search</field>
+            <field name="model">module.movement</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="source_account_id"/>
+                    <field name="destination_account_id"/>
+                    <field name="amount"/>
+                    <field name="currency_id"/>
+                    <field name="execution_date"/>
+                    <field name="label"/>
+                    <field name="state"/>
+                    <field name="administrator_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_movement_form" model="ir.ui.view">
+            <field name="name">movement.form</field>
+            <field name="model">module.movement</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="source_account_id"/>
+                            <field name="destination_account_id"/>
+                            <field name="amount"/>
+                            <field name="currency_id"/>
+                            <field name="execution_date"/>
+                            <field name="label"/>
+                            <field name="state"/>
+                            <field name="administrator_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_movement" model="ir.actions.act_window">
+            <field name="name">Movements</field>
+            <field name="res_model">module.movement</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="menu_movement" name="Movements" parent="base.menu_finance" sequence="20"/>
+        <menuitem id="menu_movement_list" name="Movement List" parent="menu_movement" action="action_movement" sequence="10"/>
+        
+    </data>
+</odoo>
