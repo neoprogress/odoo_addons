@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+
+        <!-- Main Menu -->
+        <menuitem id="menu_main" name="Gestion Financière" sequence="10"/>
+
+        <!-- Sub Menus -->
+        <menuitem id="menu_movement" name="Mouvements" parent="menu_main" sequence="10"/>
+        <menuitem id="menu_account" name="Comptes" parent="menu_main" sequence="20"/>
+
+        <!-- Menu Actions -->
+        <menuitem id="menu_movement_list" name="Liste des Mouvements" parent="menu_movement" action="action_movement" sequence="10"/>
+        <menuitem id="menu_account_list" name="Liste des Comptes" parent="menu_account" action="action_account" sequence="10"/>
+
+    </data>
+</odoo>
