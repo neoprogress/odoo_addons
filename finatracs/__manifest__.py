@@ -1,0 +1,26 @@
+{
+    'name': 'Module de mouvements financiers',
+    'version': '1.0',
+    'summary': 'Gestion des mouvements financiers',
+    'description': 'Module Odoo pour la gestion des mouvements financiers incluant les achats, ventes, prêts, emprunts, remboursements, dons, pertes et conversions monétaires.',
+    'category': 'Finance',
+    'author': 'BOOL',
+    'depends': [
+        'base',
+        'contacts',
+        'project',
+        'event',
+        'hr',
+        'stock',
+    ],
+    'data': [
+        'views/movement_views.xml',
+        'views/transaction_views.xml',
+        'views/account_views.xml',
+        'views/menu_views.xml',
+    ],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}
